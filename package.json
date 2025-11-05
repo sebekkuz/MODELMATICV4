@@ -1,0 +1,23 @@
+﻿{
+  "name": "symulatorprodukcji-1",
+  "version": "1.0.0",
+  "description": "Webowy symulator linii produkcyjnych HMLV",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && python -m uvicorn src.main:app --reload --host 0.0.0.0 --port 8000",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && echo 'Backend built'",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && python -m pytest",
+    "start:backend": "cd backend && python -m uvicorn src.main:app --host 0.0.0.0 --port 8000"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "keywords": ["simulation", "production", "hmlv", "manufacturing"],
+  "author": "Symulator Produkcji Team",
+  "license": "MIT"
+}

@@ -1,0 +1,252 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.app-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar-left {
+  width: 250px;
+  background: #34495e;
+  color: white;
+  overflow-y: auto;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #ecf0f1;
+}
+
+.sidebar-right {
+  width: 300px;
+  background: white;
+  border-left: 1px solid #bdc3c7;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewport-container {
+  flex: 1;
+  position: relative;
+  background: #2c3e50;
+}
+
+.palette {
+  padding: 1rem;
+}
+
+.palette h3 {
+  margin-bottom: 1rem;
+  color: #ecf0f1;
+}
+
+.palette-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: #3498db;
+  border-radius: 4px;
+  cursor: grab;
+  transition: background-color 0.2s;
+}
+
+.palette-item:hover {
+  background: #2980b9;
+}
+
+.palette-item .icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.toolbar {
+  background: #34495e;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #2c3e50;
+}
+
+.toolbar-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toolbar-btn:hover {
+  background: #2980b9;
+}
+
+.toolbar-btn:disabled {
+  background: #7f8c8d;
+  cursor: not-allowed;
+}
+
+.toolbar-btn.start { background: #27ae60; }
+.toolbar-btn.start:hover { background: #229954; }
+.toolbar-btn.pause { background: #f39c12; }
+.toolbar-btn.pause:hover { background: #e67e22; }
+.toolbar-btn.reset { background: #e74c3c; }
+.toolbar-btn.reset:hover { background: #c0392b; }
+
+.viewport {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.inspector {
+  padding: 1rem;
+  border-bottom: 1px solid #bdc3c7;
+  flex: 1;
+}
+
+.inspector h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.inspector-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #34495e;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.5rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+.console {
+  padding: 1rem;
+  background: #2c3e50;
+  color: #ecf0f1;
+  font-family: 'Courier New', monospace;
+  height: 200px;
+  overflow-y: auto;
+}
+
+.console h3 {
+  margin-bottom: 0.5rem;
+  color: #ecf0f1;
+}
+
+.console-log {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #34495e;
+  font-size: 0.9rem;
+}
+
+.results-dashboard {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #bdc3c7;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.export-btn {
+  padding: 0.5rem 1rem;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-container {
+  background: white;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chart-container h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.summary-stats {
+  background: white;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: #ecf0f1;
+  border-radius: 4px;
+}
+
+.stat-label {
+  font-weight: bold;
+  color: #34495e;
+}
+
+.stat-value {
+  color: #2c3e50;
+}
